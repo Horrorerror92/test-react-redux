@@ -1,12 +1,18 @@
-import React from 'react';
-import './App.css';
+import React, {FC} from 'react';
+import Header from './common-components/header'
+import Manage from './common-components/manage'
+import Memory from './common-components/memory'
+import './styles.css';
 
-function App() {
+
+const App: FC = () => {
   return (
-    <div className="App">
-      12345
-    </div>
-  );
+    <>
+      <Header/>
+      <Manage/>
+      <Memory/>
+    </>
+  ); 
 }
 
 export default App;
