@@ -1,8 +1,9 @@
 import React, {FC} from 'react';
 import './styles.css';
+import '../../common-styles/reset.css'
+import '../../common-styles/styles.css'
 
-
-const App: FC = () => {
+const Manage: FC = () => {
   return (
     <div className="manage">
       manage
@@ -10,4 +11,4 @@ const App: FC = () => {
   ); 
 }
 
-export default App;
+export default Manage;

@@ -1,8 +1,10 @@
 import React, {FC} from 'react';
 import './styles.css';
+import '../../common-styles/reset.css'
+import '../../common-styles/styles.css'
 
 
-const App: FC = () => {
+const Memory: FC = () => {
   return (
     <div className="memory">
       memory
@@ -10,4 +12,4 @@ const App: FC = () => {
   ); 
 }
 
-export default App;
+export default Memory;
