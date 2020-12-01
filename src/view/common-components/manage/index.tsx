@@ -1,12 +1,15 @@
 import React, {FC} from 'react';
-import './styles.css';
-import '../../common-styles/reset.css'
-import '../../common-styles/styles.css'
+import ManageButtonsInput from '../../sub-common-components/manage-buttons-input'
+import ManageInformation  from '../../sub-common-components/manage-information'
+import styles from './styles.module.css';
+import '../../common-styles/reset.module.css'
+import '../../common-styles/styles.module.css'
 
 const Manage: FC = () => {
   return (
-    <div className="manage">
-      manage
+    <div className={styles.manage}>
+      <ManageButtonsInput/>
+      <ManageInformation/>
     </div>
   ); 
 }

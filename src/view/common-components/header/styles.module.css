@@ -1,0 +1,17 @@
+.header {
+  text-align: center;
+  background-color: #1A9FFF;
+  padding: 5px;
+  color: white;
+}
+
+@media screen and (max-width: 900px) {
+  h1 {
+    font-size: 2em;
+  }  
+  h2 {
+    font-size: 1.5em;
+  }  
+}
+
+

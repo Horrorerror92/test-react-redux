@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import Header from './common-components/header'
 import TwoColumn from './common-components/two-column'
-import './styles.css';
+import './styles.module.css';
 
 const App: FC = () => {
   return (

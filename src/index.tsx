@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom'
-import './index.css';
+import './index.module.css';
 import App from './view/index';
 
 const rootElement: HTMLElement | null = document.getElementById('root')
