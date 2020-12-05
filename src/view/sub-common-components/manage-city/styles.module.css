@@ -1,7 +1,24 @@
 .manageCity {
-  display: flex;  
+  display: flex; 
+  flex-flow: column;
 }
 
+.manageHeader {
+  text-align: left;
+  color: #777777;
+  margin-top: 10px;
+}
+
+.manageCityItem {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  margin-top: 10px;
+  background: #EBEDEE; 
+  padding: 10px;
+}
 
 
 

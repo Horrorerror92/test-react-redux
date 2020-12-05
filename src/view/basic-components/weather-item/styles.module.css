@@ -1,0 +1,6 @@
+.weather {
+  display: flex;
+}
+.description {
+  margin-left: 5px;
+}

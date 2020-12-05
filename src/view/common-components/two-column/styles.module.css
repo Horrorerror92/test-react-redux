@@ -3,15 +3,21 @@
   justify-content: space-between;
   border-radius: 0.5em;
   height: 50%;
-  width: 50%;
+  width: 70%;
   margin: 10px auto 0 auto;
   background: white;
   padding: 1em;
 }
 
+@media screen and (max-width: 1100px) {
+  .twoColumn {
+    flex-flow: column;
+    width:80%;
+  }  
+}
 @media screen and (max-width: 900px) {
   .twoColumn {
     flex-flow: column;
     width:90%;
-  }  
-}
+  }
+}  
