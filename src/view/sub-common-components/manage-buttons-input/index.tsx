@@ -3,7 +3,7 @@ import styles from './styles.module.css';
 import Button from '../../basic-components/button'
 import Input from '../../basic-components/input'
 
-const manageButtonsInput: FC = () => {
+const manageButtonsInput: FC = (props) => {
   return (
     <div className={styles.manageButtonsInput}>
       <Input 
