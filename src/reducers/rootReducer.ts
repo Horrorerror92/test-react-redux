@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-// import  submitCity from ''
+import  { cityInformationReducer } from './cityInformationReducer'
 
 const rootReducer = combineReducers({
-
+  cityInformationReducer
 })
 
 export default rootReducer

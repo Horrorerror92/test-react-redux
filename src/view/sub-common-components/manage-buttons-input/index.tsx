@@ -4,6 +4,13 @@ import Button from '../../basic-components/button'
 import Input from '../../basic-components/input'
 
 const manageButtonsInput: FC = (props) => {
+  
+  const submitCity = (e: React.SyntheticEvent<HTMLButtonElement>) => {
+    e.stopPropagation()
+    e.preventDefault()
+    
+  }
+
   return (
     <div className={styles.manageButtonsInput}>
       <Input 
@@ -12,6 +19,7 @@ const manageButtonsInput: FC = (props) => {
        <div className={styles.groupButton}>
         <Button
           title = 'Submit'
+          onClick = {submitCity}
         />
         <Button
           title = 'Remember'
