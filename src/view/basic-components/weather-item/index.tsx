@@ -6,7 +6,6 @@ const WeatherComponent: FC<WeatherInformation> = (
   props: WeatherInformation,
 ) => (
   <div className = {styles.weather}>
-      <p className = {styles.description}>{props.name} :</p>
       <p className = {styles.description}>{props.data}</p>
   </div>
 )

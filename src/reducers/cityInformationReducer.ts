@@ -25,7 +25,7 @@ export const cityInformationReducer = (state = initialState, action:any) =>{
       return {
         ...state,
         loading: false,
-        error: action.error.payload      
+        error: action.payload.error.message      
       }
       default:
         return state;

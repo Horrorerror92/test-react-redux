@@ -8,12 +8,11 @@ export const getCityInformation = (city: string) => {
     dispatch(addCityStarted());
     axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`)
     .then(function (response) {
-      console.log(response);
-      dispatch(addCitySuccess(response.data));
+      const dataFromParse = parseData(response.data)
+      dispatch(addCitySuccess(dataFromParse));
     })
     .catch(function (error) {
-      console.log(error.message);
-      dispatch(addTodoFailure(error.message));
+      dispatch(addTodoFailure(error));
     })
   }
 }
@@ -35,3 +34,16 @@ const addTodoFailure = (error:any) => ({
     error
   }
 });
+
+const parseData = (data: any) => {
+  let dataReturn = [] 
+  dataReturn.push(`City : ${data.name}`)
+  for (let key in data.main) {
+    if(data.main.hasOwnProperty(key)){
+      if(key === 'temp') { dataReturn.push(`Temp : ${data.main[key]} C`)} 
+      if(key === 'feels_like') { dataReturn.push(`Feels like : ${data.main[key]} C`)} 
+      if(key === 'humidity') { dataReturn.push(`Humidity : ${data.main[key]} %`)} 
+    }
+  }
+  return dataReturn
+}

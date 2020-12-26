@@ -11,10 +11,12 @@ const manageButtonsInput: FC<IgetCityProps> = ({
   OnGetCityInformation
 }) => {
 
+let city:string = '';
+
 const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
   event.stopPropagation()
   event.preventDefault()
-  console.log(event.target.value)
+  city = event.target.value
 }
 
   return (
@@ -27,7 +29,7 @@ const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
         <div className={styles.groupButton}>
           <Button
             title = 'Submit'
-            onClick={() => OnGetCityInformation('Minsk')}
+            onClick={() => OnGetCityInformation(city)}
           />
           <Button
             title = 'Remember'

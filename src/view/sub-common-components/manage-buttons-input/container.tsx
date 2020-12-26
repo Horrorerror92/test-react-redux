@@ -8,5 +8,5 @@ const mapDispatchToProps = (dispatch:any) => ({
   },
 })
 
-export default connect(null,mapDispatchToProps)(manageButtonsInput);
+export default connect(null,mapDispatchToProps)(manageButtonsInput)
 
