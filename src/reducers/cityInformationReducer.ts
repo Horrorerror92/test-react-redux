@@ -19,7 +19,7 @@ export const cityInformationReducer = (state = initialState, action:any) =>{
         ...state,
         loading: false,
         error: null,
-        data: [...state.data, action.payload]
+        data: action.payload.data
       };
     case WEATHER_DATA_FAILURE:
       return {
