@@ -4,11 +4,13 @@ import Button from '../../basic-components/button'
 import Input from '../../basic-components/input'
 
 interface IgetCityProps {
-  OnGetCityInformation: (city: string) => void
+  OnGetCityInformation: (city: string) => void,
+  OnAddCityToList: (city: string) => void
 }
 
 const manageButtonsInput: FC<IgetCityProps> = ({
-  OnGetCityInformation
+  OnGetCityInformation,
+  OnAddCityToList
 }) => {
 
 let city:string = '';
@@ -33,6 +35,7 @@ const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
           />
           <Button
             title = 'Remember'
+            onClick={() => OnAddCityToList(city)}
           />
         </div>
     </div>

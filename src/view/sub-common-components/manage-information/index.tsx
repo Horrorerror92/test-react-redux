@@ -11,8 +11,8 @@ const manageInformation: FC<informationStateItem> = (props) => {
 
   return (
     <div>
-      <h4 className={ styles.manageHeader}> Information about City: </h4>
-      <div className={ styles.manageInformation }>
+      <h4 className={styles.manageHeader}> Information about City: </h4>
+      <div className={styles.manageInformation }>
         {props.error ? (
           <WeatherComponent
             data = {props.error}

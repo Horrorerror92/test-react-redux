@@ -1,13 +1,7 @@
-import { STARTED_WEATHER_DATA, WEATHER_DATA_SUCCESS, WEATHER_DATA_FAILURE} from '../actions/types'
+import { STARTED_WEATHER_DATA, WEATHER_DATA_SUCCESS, WEATHER_DATA_FAILURE } from '../actions/types'
+import { InitialState } from './initialState'
 
-const initialState = {
-  loading: false,
-  data: [],
-  city: null,
-  error: null
-};
-
-export const cityInformationReducer = (state = initialState, action:any) =>{
+export const cityInformationReducer = (state = InitialState, action:any) =>{
   switch (action.type) {
     case STARTED_WEATHER_DATA:
       return {

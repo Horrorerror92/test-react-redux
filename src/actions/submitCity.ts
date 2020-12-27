@@ -19,21 +19,21 @@ export const getCityInformation = (city: string) => {
 
 const addCityStarted = () => ({
   type: STARTED_WEATHER_DATA
-});
+})
 
 const addCitySuccess = (data:any) => ({
   type: WEATHER_DATA_SUCCESS,
   payload: {
     data
   }
-});
+})
 
 const addTodoFailure = (error:any) => ({
   type: WEATHER_DATA_FAILURE,
   payload: {
     error
   }
-});
+})
 
 const parseData = (data: any) => {
   let dataReturn = [] 
