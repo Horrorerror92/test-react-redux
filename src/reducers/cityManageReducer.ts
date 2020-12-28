@@ -1,5 +1,3 @@
-import { connectAdvanced } from 'react-redux';
-import { Identifier, isIdentifier } from 'typescript';
 import { WEATHER_CITY_REMEMBER, WEATHER_CITY_DELETE } from '../actions/types'
 import { InitialState } from './initialState'
 

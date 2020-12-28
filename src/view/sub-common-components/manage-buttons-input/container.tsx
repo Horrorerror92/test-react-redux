@@ -8,7 +8,9 @@ const mapDispatchToProps = (dispatch:any) => ({
     dispatch(getCityInformation(city))
   },
   OnAddCityToList(city:string) {
-    dispatch(addCityToList(city))
+    if(city.length >1){
+      dispatch(addCityToList(city))
+    }    
   }
 })
 

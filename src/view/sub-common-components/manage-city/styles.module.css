@@ -20,5 +20,15 @@
   padding: 10px;
 }
 
+.cityItem {
+  display: flex;
+  margin-top: 20px;
+}
+
+.description {
+  font-size: 14px;
+  font-weight: bold;
+}
+
 
 

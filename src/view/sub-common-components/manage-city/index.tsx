@@ -1,22 +1,35 @@
 import React, {FC} from 'react';
 import styles from './styles.module.css';
-import CityItemComponent from '../../basic-components/city-item'
+import Button from '../../basic-components/button'
 
 interface manageStateItem {
-  cityList: Array<string>
+  cityList: Array<string>,
+  OnGetCityInformation: (city: string) => void,
+  OnRemoveCityFromList: (cityId: any)=> void
 }
 
-const manageCity: FC<manageStateItem> = (props) => {
+const manageCity: FC<manageStateItem> = ({
+  cityList,
+  OnGetCityInformation,
+  OnRemoveCityFromList
+}) => {
   return (
     <div className={styles.manageCity}>
       <h4 className={styles.manageHeader}>Cities list:</h4>
       <div className={styles.manageCityItem}>
-        { props.cityList.length>0 ? (
-          Object.keys(props.cityList).map((cityId:any) => (
-            <CityItemComponent
-              city = {props.cityList[cityId]}
-              key = {cityId}
-            />
+        { cityList.length>0 ? (
+          Object.keys(cityList).map((cityId:any) => (
+            <div className = {styles.cityItem} key = {cityId}>
+              <p className = {styles.description}>{cityList[cityId]}</p> 
+              <Button
+                title = 'Submit'
+                onClick={() => OnGetCityInformation(cityList[cityId])}
+              />
+              <Button
+                title = 'Remove'
+                onClick={() => OnRemoveCityFromList(cityId)}
+              />     
+            </div>
           ))
           ):(
             <div>

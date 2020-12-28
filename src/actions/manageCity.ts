@@ -1,4 +1,3 @@
-import { Identifier } from 'typescript'
 import { WEATHER_CITY_REMEMBER, WEATHER_CITY_DELETE } from './types'
 
 export const addCityToList = (city:string) => {
@@ -7,7 +6,7 @@ export const addCityToList = (city:string) => {
   }
 }
 
-export const removeCityFromList = (cityId:Identifier) => {
+export const removeCityFromList = (cityId:any) => {
   return(dispatch:any) => {
     dispatch(deleteCity(cityId))
   }
@@ -18,7 +17,7 @@ const rememberCity = (city: string) => ({
   city: city
 })
 
-const deleteCity = (cityId: Identifier) => ({
+const deleteCity = (cityId: any) => ({
   type: WEATHER_CITY_DELETE,
   city: cityId
 })
