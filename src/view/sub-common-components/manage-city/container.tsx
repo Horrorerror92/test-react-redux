@@ -11,8 +11,8 @@ const mapDispatchToProps = (dispatch:any) => ({
   OnGetCityInformation(city:string) {
     dispatch(getCityInformation(city))
   },
-  OnRemoveCityFromList(cityId:any){
-    dispatch(removeCityFromList(cityId))
+  OnRemoveCityFromList(city:string){
+    dispatch(removeCityFromList(city))
   }
 })
 

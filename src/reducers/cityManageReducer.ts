@@ -1,7 +1,7 @@
 import { WEATHER_CITY_REMEMBER, WEATHER_CITY_DELETE } from '../actions/types'
-import { InitialState } from './initialState'
+import { InitialCityList } from './initialState'
 
-export const cityManageReducer = (state = InitialState, action:any) =>{
+export const cityManageReducer = (state = InitialCityList, action:any) =>{
   switch (action.type) {
     case WEATHER_CITY_REMEMBER:
       return {
@@ -11,7 +11,7 @@ export const cityManageReducer = (state = InitialState, action:any) =>{
     case WEATHER_CITY_DELETE:
       return {
         ...state,
-        cityList: state.cityList.filter((item:any) => item.id !== action.city)
+        cityList: state.cityList.filter((item:any) => item !== action.city)
       };
       default:
         return state;

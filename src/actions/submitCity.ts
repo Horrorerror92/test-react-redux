@@ -1,5 +1,10 @@
 import axios from 'axios'
-import { STARTED_WEATHER_DATA, WEATHER_DATA_SUCCESS, WEATHER_DATA_FAILURE } from './types'
+import { 
+  STARTED_WEATHER_DATA,
+  WEATHER_DATA_SUCCESS, 
+  WEATHER_DATA_FAILURE, 
+  WEATHER_DATA_GET_ID 
+} from './types'
 import { API_KEY } from '../.resources/resourses'
 
 
@@ -9,7 +14,9 @@ export const getCityInformation = (city: string) => {
     axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`)
     .then(function (response) {
       const dataFromParse = parseData(response.data)
+      const targetId = parseId(response.data)
       dispatch(addCitySuccess(dataFromParse));
+      dispatch(addCityId(targetId))
     })
     .catch(function (error) {
       dispatch(addTodoFailure(error));
@@ -25,6 +32,13 @@ const addCitySuccess = (data:any) => ({
   type: WEATHER_DATA_SUCCESS,
   payload: {
     data
+  }
+})
+
+const addCityId = (targetId:any) => ({
+  type: WEATHER_DATA_GET_ID,
+  payload: {
+    targetId
   }
 })
 
@@ -51,4 +65,8 @@ const parseData = (data: any) => {
     }
   } 
   return dataReturn
+}
+
+const parseId = (data: any) => {
+  return data.id
 }

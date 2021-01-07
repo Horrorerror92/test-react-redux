@@ -6,9 +6,9 @@ export const addCityToList = (city:string) => {
   }
 }
 
-export const removeCityFromList = (cityId:any) => {
+export const removeCityFromList = (city:string) => {
   return(dispatch:any) => {
-    dispatch(deleteCity(cityId))
+    dispatch(deleteCity(city))
   }
 }
 
@@ -17,7 +17,7 @@ const rememberCity = (city: string) => ({
   city: city
 })
 
-const deleteCity = (cityId: any) => ({
+const deleteCity = (city: string) => ({
   type: WEATHER_CITY_DELETE,
-  city: cityId
+  city: city
 })

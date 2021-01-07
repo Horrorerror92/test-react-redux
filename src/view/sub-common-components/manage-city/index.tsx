@@ -5,7 +5,7 @@ import Button from '../../basic-components/button'
 interface manageStateItem {
   cityList: Array<string>,
   OnGetCityInformation: (city: string) => void,
-  OnRemoveCityFromList: (cityId: any)=> void
+  OnRemoveCityFromList: (city: string)=> void
 }
 
 const manageCity: FC<manageStateItem> = ({
@@ -27,7 +27,7 @@ const manageCity: FC<manageStateItem> = ({
               />
               <Button
                 title = 'Remove'
-                onClick={() => OnRemoveCityFromList(cityId)}
+                onClick={() => OnRemoveCityFromList(cityList[cityId])}
               />     
             </div>
           ))
