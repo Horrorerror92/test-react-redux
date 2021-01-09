@@ -8,7 +8,8 @@ interface IgetCityProps {
   OnAddCityToList: (city: string, cityCount:number, cityList:Array<string>) => void,
   cityId:number|null,
   cityList: Array<string>,
-  cityDuplicate: boolean
+  cityDuplicate: boolean,
+  shortName: boolean
 }
 
 let city:string = '';
@@ -17,7 +18,8 @@ const manageButtonsInput: FC<IgetCityProps> = ({
   OnGetCityInformation,
   OnAddCityToList,
   cityList,
-  cityDuplicate
+  cityDuplicate,
+  shortName
 }) => {
 
 const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -37,16 +39,21 @@ const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
           <div className = {styles.groupButton}>
             <Button
               title = 'Submit'
-              onClick={() => OnGetCityInformation(city)}
+              onClick={() => OnGetCityInformation(city.trim())}
             />
             <Button
               title = 'Remember'
-              onClick={() => OnAddCityToList(city, cityList.length, cityList)}
+              onClick={() => OnAddCityToList(city.trim(), cityList.length, cityList)}
             />
           </div>
       </div>
       { cityDuplicate ? (
          <span className = {styles.duplicateMsg}>You can't remember the city twice.</span> 
+        ):(
+        null
+      )}
+      { shortName ? (
+         <span className = {styles.duplicateMsg}>The name is too short.</span> 
         ):(
         null
       )}

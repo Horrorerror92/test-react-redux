@@ -2,7 +2,8 @@ import {
   WEATHER_CITY_REMEMBER, 
   WEATHER_CITY_DELETE, 
   CITY_LIMIT,
-  CITY_DUPLICATE
+  CITY_DUPLICATE,
+  CITY_SHORT
  } from './types'
 
 export const addCityToList = (city: string) => {
@@ -17,15 +18,21 @@ export const removeCityFromList = (city: string) => {
   }
 }
 
-export const blockCityList = (limit: boolean) => {
+export const blockCityList = () => {
   return(dispatch:any) => {
-    dispatch(cityListLimit(limit))
+    dispatch(cityListLimit())
   }
 }
 
-export const triggeredCityDuplicate = (duplicate: boolean) => {
+export const triggeredCityDuplicate = () => {
   return(dispatch:any) => {
-    dispatch(cityDuplicate(duplicate))
+    dispatch(cityDuplicate())
+  }
+}
+
+export const triggeredShortName = () => {
+  return(dispatch:any) => {
+    dispatch(cityShort())
   }
 }
 
@@ -39,12 +46,14 @@ const deleteCity = (city: string) => ({
   city
 })
 
-const cityListLimit = (limit: boolean) => ({
+const cityListLimit = () => ({
   type: CITY_LIMIT,
-  limit
 })
 
-const cityDuplicate = (duplicate: boolean) => ({
+const cityDuplicate = () => ({
   type: CITY_DUPLICATE,
-  duplicate
+})
+
+const cityShort = () => ({
+  type: CITY_SHORT,
 })

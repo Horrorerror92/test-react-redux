@@ -8,5 +8,6 @@ export const InitialState = {
 export const InitialCityList = {
   cityList: [],
   limit: false,
-  duplicate: false
+  duplicate: false,
+  shortName: false
 }

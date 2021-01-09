@@ -2,7 +2,8 @@ import {
   WEATHER_CITY_REMEMBER, 
   WEATHER_CITY_DELETE,
   CITY_LIMIT,
-  CITY_DUPLICATE
+  CITY_DUPLICATE,
+  CITY_SHORT
 } from '../actions/types'
 import { InitialCityList } from './initialState'
 
@@ -12,7 +13,8 @@ export const cityManageReducer = (state = InitialCityList, action:any) =>{
       return {
         ...state,
         cityList: state.cityList.concat(action.city),
-        duplicate: false 
+        duplicate: false,
+        shortName: false
       }
     case WEATHER_CITY_DELETE:
       return {
@@ -29,6 +31,11 @@ export const cityManageReducer = (state = InitialCityList, action:any) =>{
       return {
         ...state,
         duplicate: true
+      }
+    case CITY_SHORT:
+      return {
+        ...state,
+        shortName: true
       }
       default:
         return state;
