@@ -4,12 +4,14 @@ import Button from '../../basic-components/button'
 
 interface manageStateItem {
   cityList: Array<string>,
+  limit: boolean,
   OnGetCityInformation: (city: string) => void,
   OnRemoveCityFromList: (city: string)=> void
 }
 
 const manageCity: FC<manageStateItem> = ({
   cityList,
+  limit,
   OnGetCityInformation,
   OnRemoveCityFromList
 }) => {
@@ -36,6 +38,12 @@ const manageCity: FC<manageStateItem> = ({
             City list is empty.
             </div>
           )
+        }
+        { limit ? (
+          <span className = {styles.limitMsg}>You can save no more than 5 cities. </span>
+        ):(
+          null
+        )
         }
       </div>
     </div>

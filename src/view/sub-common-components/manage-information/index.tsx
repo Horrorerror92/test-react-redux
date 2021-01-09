@@ -11,7 +11,7 @@ const manageInformation: FC<informationStateItem> = (props) => {
 
   return (
     <div>
-      <h4 className={styles.manageHeader}> Information about City: </h4>
+      <h4 className={styles.manageHeader}> Information about City: </h4>     
       <div className={styles.manageInformation }>
         {props.error ? (
           <WeatherComponent
@@ -25,6 +25,12 @@ const manageInformation: FC<informationStateItem> = (props) => {
             />
           ))
         )}
+        {props.data.length === 0 && props.error === null ? (         
+          <span className = {styles.description}>No information</span>
+        ):(
+          null
+          )
+        }
       </div>
     </div>
   ); 

@@ -5,8 +5,10 @@ import Input from '../../basic-components/input'
 
 interface IgetCityProps {
   OnGetCityInformation: (city: string) => void,
-  OnAddCityToList: (city: string, cityId:number|null) => void,
-  cityId:number|null
+  OnAddCityToList: (city: string, cityCount:number, cityList:Array<string>) => void,
+  cityId:number|null,
+  cityList: Array<string>,
+  cityDuplicate: boolean
 }
 
 let city:string = '';
@@ -14,7 +16,8 @@ let city:string = '';
 const manageButtonsInput: FC<IgetCityProps> = ({
   OnGetCityInformation,
   OnAddCityToList,
-  cityId
+  cityList,
+  cityDuplicate
 }) => {
 
 const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -24,22 +27,29 @@ const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
 }
 
   return (
-    <div className={styles.manageButtonsInput}>
-        <Input 
-          placeholder = 'Type City name here'
-          type = 'text'
-          onChange = {handleInput}
-        />
-        <div className={styles.groupButton}>
-          <Button
-            title = 'Submit'
-            onClick={() => OnGetCityInformation(city)}
+    <div className = {styles.manageButtonBlock}>
+      <div className = {styles.manageButtonsInput}>
+          <Input 
+            placeholder = 'Type City name here'
+            type = 'text'
+            onChange = {handleInput}
           />
-          <Button
-            title = 'Remember'
-            onClick={() => OnAddCityToList(city, cityId)}
-          />
-        </div>
+          <div className = {styles.groupButton}>
+            <Button
+              title = 'Submit'
+              onClick={() => OnGetCityInformation(city)}
+            />
+            <Button
+              title = 'Remember'
+              onClick={() => OnAddCityToList(city, cityList.length, cityList)}
+            />
+          </div>
+      </div>
+      { cityDuplicate ? (
+         <span className = {styles.duplicateMsg}>You can't remember the city twice.</span> 
+        ):(
+        null
+      )}
     </div>
   ); 
 }

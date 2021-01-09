@@ -6,5 +6,7 @@ export const InitialState = {
 };
 
 export const InitialCityList = {
-  cityList: []
+  cityList: [],
+  limit: false,
+  duplicate: false
 }

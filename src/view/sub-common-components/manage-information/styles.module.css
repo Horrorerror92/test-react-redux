@@ -12,6 +12,11 @@
   color: #777777;
 }
 
+.description {
+  font-size: 14px;
+  margin:10px 0 10px 0;
+}
+
 @media screen and (max-width: 1100px) {
   .manageInformation {
     margin-right: 0px;

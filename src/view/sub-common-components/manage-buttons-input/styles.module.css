@@ -1,11 +1,21 @@
+.manageButtonBlock {
+  margin-bottom: 10px;
+}
+
 .manageButtonsInput {
   display: flex;
   margin-bottom: 10px;
 }
+
 .groupButton {
   display: flex;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+.duplicateMsg {
+  font-size: 14px;
+  color: red;
 }
 
 @media screen and (max-width: 500px) {

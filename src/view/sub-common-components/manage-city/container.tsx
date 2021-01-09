@@ -4,7 +4,8 @@ import { getCityInformation } from '../../../actions/submitCity'
 import { removeCityFromList } from '../../../actions/manageCity'
 
 const mapStateToProps = (state:any) => ({
-  cityList: state.cityManageReducer.cityList
+  cityList: state.cityManageReducer.cityList,
+  limit: state.cityManageReducer.limit
 })
 
 const mapDispatchToProps = (dispatch:any) => ({
