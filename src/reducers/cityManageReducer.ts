@@ -14,13 +14,15 @@ export const cityManageReducer = (state = InitialCityList, action:any) =>{
         ...state,
         cityList: state.cityList.concat(action.city),
         duplicate: false,
-        shortName: false
+        shortName: false,
+        toLocal: localStorage.setItem('cityList', JSON.stringify(state.cityList.concat(action.city))) 
       }
     case WEATHER_CITY_DELETE:
       return {
         ...state,
         cityList: state.cityList.filter((item:any) => item !== action.city),
-        limit: false
+        limit: false,
+        toLocal: localStorage.setItem('cityList', JSON.stringify(state.cityList.filter((item:any) => item !== action.city)))
       }
     case CITY_LIMIT:
       return {

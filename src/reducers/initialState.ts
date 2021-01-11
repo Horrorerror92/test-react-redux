@@ -1,3 +1,5 @@
+let arrayCityRememberList = JSON.parse(localStorage.getItem('cityList')||'[]') 
+
 export const InitialState = {
   loading: false,
   data: [],
@@ -6,7 +8,7 @@ export const InitialState = {
 };
 
 export const InitialCityList = {
-  cityList: [],
+  cityList: arrayCityRememberList,
   limit: false,
   duplicate: false,
   shortName: false
