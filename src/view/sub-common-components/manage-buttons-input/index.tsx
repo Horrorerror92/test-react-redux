@@ -6,7 +6,6 @@ import Input from '../../basic-components/input'
 interface IgetCityProps {
   OnGetCityInformation: (city: string) => void,
   OnAddCityToList: (city: string, cityCount:number, cityList:Array<string>) => void,
-  cityId:number|null,
   cityList: Array<string>,
   cityDuplicate: boolean,
   shortName: boolean

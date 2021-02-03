@@ -46,6 +46,7 @@
       "last 1 safari version"
     ]
   },
+
   "jest": {
     "snapshotSerializers": [
       "enzyme-to-json/serializer"

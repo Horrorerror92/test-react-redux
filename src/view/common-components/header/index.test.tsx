@@ -2,7 +2,6 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Header from './index'
 
-const data = 'test data'
 let wrapped = shallow(<Header />)
 
 describe('Header', () => {

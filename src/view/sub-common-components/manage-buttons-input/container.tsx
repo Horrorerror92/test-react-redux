@@ -7,7 +7,6 @@ import { triggeredCityDuplicate } from '../../../actions/manageCity'
 import { triggeredShortName } from '../../../actions/manageCity'
 
 const mapStateToProps = (state:any) => ({
-  cityId: state.cityInformationReducer.targetId,
   cityList: state.cityManageReducer.cityList,
   cityDuplicate: state.cityManageReducer.duplicate,
   shortName: state.cityManageReducer.shortName
