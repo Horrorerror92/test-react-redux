@@ -26,4 +26,4 @@ COPY --from=build temp/server.js /app/
 COPY --from=build temp/package.json /app/
 COPY --from=build temp/package-lock.json /app/
 
-CMD ["node", "server.js"]
+CMD ["npm", "run", "servopen"]
