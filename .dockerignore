@@ -3,4 +3,3 @@ node_modules
 .pnp.js
 .vscode
 npm-debug.log
-build

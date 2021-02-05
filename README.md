@@ -9,15 +9,13 @@ In the project directory, you can run:
 - - npm start : run the app on development mode [http://localhost:3000]
 - - npm test : run all tests with watch mode.
 - - CI=true npm test --coverage --watch :  run all tests with coverage and watch mode.
-
-- - docker command:
-- - - Docker-compose.yml" up -d --build
-- - - open port: http://localhost:3001/
+- - npm run build : create static build files.
+- - node server.js : Providing static files in Express () [http://localhost:3010]
 
 - production:
 
 - - docker command:
 
-- - - docker-compose -f "Docker-compose.prod.yml" up -d --build
+- - - docker-compose -f "Docker-compose.yml" up -d --build
 
-- - - open port: http://localhost:1337/
+- - - open port: [http://localhost:1337]
