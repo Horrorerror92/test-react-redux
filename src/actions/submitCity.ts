@@ -7,11 +7,18 @@ import {
 } from './types'
 import { API_KEY } from '../.resources/resourses'
 
+let corsPrefix:string
+
+if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+  corsPrefix = ''
+} else {
+  corsPrefix = 'https://cors-anywhere.herokuapp.com/'
+}
 
 export const getCityInformation = (city: string) => {
   return (dispatch:any) => {
     dispatch(addCityStarted());
-    axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`)
+    axios.get(`${corsPrefix}http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`)
     .then(function (response) {
       const dataFromParse = parseData(response.data)
       const targetId = parseId(response.data)
