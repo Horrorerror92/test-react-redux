@@ -12,7 +12,7 @@ In the project directory, you can run:
 - - npm run build : create static build files.
 - - node server.js : Providing static files in Express () [http://localhost:3010]
 
-- production:
+- production test:
 
 - - docker command:
 
