@@ -22,8 +22,6 @@ const manageButtonsInput: FC<IgetCityProps> = ({
 }) => {
 
 const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
-  event.stopPropagation()
-  event.preventDefault()
   city = event.target.value
 }
 
