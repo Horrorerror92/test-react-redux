@@ -39,7 +39,7 @@ const handlePressed = (event: React.KeyboardEvent<HTMLInputElement>) => {
             placeholder = 'Type City name here'
             type = 'text'
             onChange = {handleInput}
-            onKeyDown = {handlePressed}
+            onKeyUp = {handlePressed}
           />
           <div className = {styles.groupButton}>
             <Button
