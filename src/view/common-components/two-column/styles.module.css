@@ -13,11 +13,13 @@
   .twoColumn {
     flex-flow: column;
     width:80%;
+    align-items: center;
   }  
 }
 @media screen and (max-width: 900px) {
   .twoColumn {
     flex-flow: column;
     width:90%;
+    align-items: center;
   }
 }  

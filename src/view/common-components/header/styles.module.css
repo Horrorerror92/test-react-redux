@@ -6,11 +6,19 @@
 }
 
 @media screen and (max-width: 900px) {
-  h1 {
+  .headerName {
     font-size: 2em;
   }  
-  h2 {
+  .headerDesc {
     font-size: 1.5em;
+  }  
+}
+@media screen and (max-width: 600px) {
+  .headerName {
+    font-size: 1.5em;
+  }  
+  .headerDesc {
+    font-size: 1.2em;
   }  
 }
 

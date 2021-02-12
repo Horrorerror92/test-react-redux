@@ -6,8 +6,8 @@ import '../../common-styles/styles.module.css'
 const Header: FC = () => {
   return (
     <div className={styles.header}>
-      <h1>Weather viewer</h1>
-      <h2>Type your City and see the current weather status</h2>
+      <h1 className={styles.headerName}>Weather viewer</h1>
+      <h2 className={styles.headerDesc}>Type your City and see the current weather status</h2>
     </div>
   ); 
 }
