@@ -27,6 +27,11 @@ const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
   city = event.target.value
 }
 
+const handlePressed = (event: React.KeyboardEvent<HTMLInputElement>) => {
+  if(event.key === 'Enter') {
+    OnGetCityInformation(city.trim())
+  }
+}
   return (
     <div className = {styles.manageButtonBlock}>
       <div className = {styles.manageButtonsInput}>
@@ -34,6 +39,7 @@ const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
             placeholder = 'Type City name here'
             type = 'text'
             onChange = {handleInput}
+            onKeyDown = {handlePressed}
           />
           <div className = {styles.groupButton}>
             <Button
