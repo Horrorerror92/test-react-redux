@@ -2,14 +2,14 @@
   border: 1px solid #cccccc;
   border-radius: 4px;
   background: #ffffff !important;
-  height: 36px; 
-  width: 200px; 
-  color: black; 
+  height: 36px;
+  width: 200px;
+  color: black;
   font-size: 16px;
   margin: 5px 5px 5px 0;
   padding: 4px;
-  outline: none; 
+  outline: none;
 }
 .input:focus {
-  border: 1px solid #000000
+  border: 1px solid #000000;
 }

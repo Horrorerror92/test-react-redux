@@ -1,6 +1,6 @@
 .header {
   text-align: center;
-  background-color: #1A9FFF;
+  background-color: #1a9fff;
   padding: 5px;
   color: white;
 }
@@ -8,18 +8,16 @@
 @media screen and (max-width: 900px) {
   .headerName {
     font-size: 2em;
-  }  
+  }
   .headerDesc {
     font-size: 1.5em;
-  }  
+  }
 }
 @media screen and (max-width: 600px) {
   .headerName {
     font-size: 1.5em;
-  }  
+  }
   .headerDesc {
     font-size: 1.2em;
-  }  
+  }
 }
-
-

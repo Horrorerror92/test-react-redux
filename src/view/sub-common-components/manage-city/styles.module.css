@@ -1,5 +1,5 @@
 .manageCity {
-  display: flex; 
+  display: flex;
   flex-flow: column;
 }
 
@@ -16,7 +16,7 @@
   border: 1px solid #cccccc;
   border-radius: 4px;
   margin-top: 10px;
-  background: #EBEDEE; 
+  background: #ebedee;
   padding: 10px;
 }
 
@@ -33,7 +33,5 @@
 .limitMsg {
   font-size: 14px;
   color: red;
-  margin-top:10px;
+  margin-top: 10px;
 }
-
-

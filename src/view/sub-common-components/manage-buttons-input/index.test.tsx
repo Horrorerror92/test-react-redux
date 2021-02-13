@@ -1,25 +1,29 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import ManaggeButtonsInput from './index'
+import ManaggeButtonsInput from './index';
 
-let cityList = ["Minsk, Brest, Vitebsk"]
-let errorMessage = ''
-let errorMessageFromApi = ''
+let cityList = ['Minsk, Brest, Vitebsk'];
+let errorMessage = '';
+let errorMessageFromApi = '';
 
-const mockGetCityInformation = jest.fn(() => { return null })
-const mockOnAddCityToList = jest.fn(() => { return null })
+const mockGetCityInformation = jest.fn(() => {
+  return null;
+});
+const mockOnAddCityToList = jest.fn(() => {
+  return null;
+});
 let wrapped = shallow(
-  <ManaggeButtonsInput 
-    cityList = {cityList} 
-    OnGetCityInformation = {mockGetCityInformation}
-    OnAddCityToList = {mockOnAddCityToList}
-    errorMessage = {errorMessage}
-    errorMessageFromApi = {errorMessageFromApi}
-  />)
-
+  <ManaggeButtonsInput
+    cityList={cityList}
+    OnGetCityInformation={mockGetCityInformation}
+    OnAddCityToList={mockOnAddCityToList}
+    errorMessage={errorMessage}
+    errorMessageFromApi={errorMessageFromApi}
+  />
+);
 
 describe('ManaggeButtonsInput: ', () => {
-  it('should render the ManaggeButtonsInput Component correctly', () => {   
-    expect(wrapped).toMatchSnapshot()
-  })
+  it('should render the ManaggeButtonsInput Component correctly', () => {
+    expect(wrapped).toMatchSnapshot();
+  });
 });

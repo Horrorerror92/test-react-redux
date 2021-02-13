@@ -81,7 +81,9 @@ header,
 nav,
 section,
 details,
-summary { display: block; }
+summary {
+  display: block;
+}
 
 html {
   box-sizing: border-box;
@@ -95,32 +97,71 @@ html {
 
 img,
 object,
-embed { max-width: 100%; }
-ul { list-style: none; }
+embed {
+  max-width: 100%;
+}
+ul {
+  list-style: none;
+}
 
 blockquote,
-q { quotes: none; }
+q {
+  quotes: none;
+}
 
 blockquote::before,
 blockquote::after,
 q::before,
-q::after { content: ''; content: none; }
+q::after {
+  content: '';
+  content: none;
+}
 
-a { margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent; box-sizing: border-box; }
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  box-sizing: border-box;
+}
 
-del { text-decoration: line-through; }
+del {
+  text-decoration: line-through;
+}
 
 abbr[title],
-dfn[title] { border-bottom: 1px dotted #000000; cursor: help; }
+dfn[title] {
+  border-bottom: 1px dotted #000000;
+  cursor: help;
+}
 
-table { border-collapse: collapse; border-spacing: 0; }
-th { font-weight: bold; vertical-align: bottom; }
-td { font-weight: normal; vertical-align: top; }
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th {
+  font-weight: bold;
+  vertical-align: bottom;
+}
+td {
+  font-weight: normal;
+  vertical-align: top;
+}
 
-hr { display: block; height: 1px; border: 0; border-top: 1px solid #cccccc; margin: 1em 0; padding: 0; }
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
 
 input,
-select { vertical-align: middle; }
+select {
+  vertical-align: middle;
+}
 
 pre {
   white-space: pre; /* CSS2 */
@@ -129,53 +170,100 @@ pre {
   word-wrap: break-word; /* IE */
 }
 
-input[type="radio"] { vertical-align: text-bottom; }
-input[type="checkbox"] { vertical-align: bottom; }
-.ie7 input[type="checkbox"] { vertical-align: baseline; }
-.ie6 input { vertical-align: text-bottom; }
+input[type='radio'] {
+  vertical-align: text-bottom;
+}
+input[type='checkbox'] {
+  vertical-align: bottom;
+}
+.ie7 input[type='checkbox'] {
+  vertical-align: baseline;
+}
+.ie6 input {
+  vertical-align: text-bottom;
+}
 
 select,
 input,
-textarea { font: 99% sans-serif; }
+textarea {
+  font: 99% sans-serif;
+}
 
-table { font-size: inherit; font: 100%; }
+table {
+  font-size: inherit;
+  font: 100%;
+}
 
-small { font-size: 85%; }
+small {
+  font-size: 85%;
+}
 
-strong { font-weight: bold; }
+strong {
+  font-weight: bold;
+}
 
 td,
-td img { vertical-align: top; }
+td img {
+  vertical-align: top;
+}
 
 sub,
-sup { font-size: 75%; line-height: 0; position: relative; }
-sup { top: -0.5em; }
-sub { bottom: -0.25em; }
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
 
 pre,
 code,
 kbd,
-samp { font-family: monospace, sans-serif; }
+samp {
+  font-family: monospace, sans-serif;
+}
 
 .clickable,
 label,
-input[type=button],
-input[type=submit],
-input[type=file],
-button { cursor: pointer; }
+input[type='button'],
+input[type='submit'],
+input[type='file'],
+button {
+  cursor: pointer;
+}
 
 button,
 input,
 select,
-textarea { margin: 0; }
+textarea {
+  margin: 0;
+}
 
 button,
-input[type=button] { width: auto; overflow: visible; }
+input[type='button'] {
+  width: auto;
+  overflow: visible;
+}
 
-.ie7 img { -ms-interpolation-mode: bicubic; }
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
 
 .clearfix::before,
-.clearfix::after { content: "\0020"; display: block; height: 0; overflow: hidden; }
-.clearfix::after { clear: both; }
-.clearfix { zoom: 1; }
+.clearfix::after {
+  content: '\0020';
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.clearfix::after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
 /* stylelint-enable */

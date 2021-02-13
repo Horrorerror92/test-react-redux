@@ -1,59 +1,53 @@
-import { 
-  WEATHER_CITY_REMEMBER, 
-  WEATHER_CITY_DELETE, 
-  CITY_LIMIT,
-  CITY_DUPLICATE,
-  CITY_SHORT
- } from './types'
+import { WEATHER_CITY_REMEMBER, WEATHER_CITY_DELETE, CITY_LIMIT, CITY_DUPLICATE, CITY_SHORT } from './types';
 
 export const addCityToList = (city: string) => {
-  return(dispatch:any) => {
-    dispatch(rememberCity(city))
-  }
-}
+  return (dispatch: any) => {
+    dispatch(rememberCity(city));
+  };
+};
 
 export const removeCityFromList = (city: string) => {
-  return(dispatch:any) => {
-    dispatch(deleteCity(city))
-  }
-}
+  return (dispatch: any) => {
+    dispatch(deleteCity(city));
+  };
+};
 
 export const blockCityList = () => {
-  return(dispatch:any) => {
-    dispatch(cityListLimit())
-  }
-}
+  return (dispatch: any) => {
+    dispatch(cityListLimit());
+  };
+};
 
 export const triggeredCityDuplicate = () => {
-  return(dispatch:any) => {
-    dispatch(cityDuplicate())
-  }
-}
+  return (dispatch: any) => {
+    dispatch(cityDuplicate());
+  };
+};
 
 export const triggeredShortName = () => {
-  return(dispatch:any) => {
-    dispatch(cityShort())
-  }
-}
+  return (dispatch: any) => {
+    dispatch(cityShort());
+  };
+};
 
 const rememberCity = (city: string) => ({
   type: WEATHER_CITY_REMEMBER,
-  city
-})
+  city,
+});
 
 const deleteCity = (city: string) => ({
   type: WEATHER_CITY_DELETE,
-  city
-})
+  city,
+});
 
 const cityListLimit = () => ({
-  type: CITY_LIMIT
-})
+  type: CITY_LIMIT,
+});
 
 const cityDuplicate = () => ({
-  type: CITY_DUPLICATE
-})
+  type: CITY_DUPLICATE,
+});
 
 const cityShort = () => ({
-  type: CITY_SHORT
-})
+  type: CITY_SHORT,
+});
