@@ -9,8 +9,8 @@ interface IgetCityProps {
   OnGetCityInformation: (city: string) => void,
   OnAddCityToList: (city: string, cityCount:number, cityList:Array<string>) => void,
   cityList: Array<string>,
-  cityDuplicate: boolean,
-  shortName: boolean
+  errorMessage: string,
+  errorMessageFromApi: string
 }
 
 let city:string = '';
@@ -19,8 +19,8 @@ const manageButtonsInput: FC<IgetCityProps> = ({
   OnGetCityInformation,
   OnAddCityToList,
   cityList,
-  cityDuplicate,
-  shortName
+  errorMessage,
+  errorMessageFromApi
 }) => {
 
 const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -52,13 +52,13 @@ const handlePressed = (event: React.KeyboardEvent<HTMLInputElement>) => {
             />
           </div>
       </div>
-      { cityDuplicate ? (
-         <span className = {styles.duplicateMsg}>You can't remember the city twice.</span> 
+      { errorMessage.length>0 ? (
+         <span className = {styles.errorMsg}>{errorMessage}</span> 
         ):(
         null
       )}
-      { shortName ? (
-         <span className = {styles.duplicateMsg}>The name is too short.</span> 
+      { errorMessageFromApi.length>0 ? (
+         <span className = {styles.errorMsg}>{errorMessageFromApi}</span> 
         ):(
         null
       )}

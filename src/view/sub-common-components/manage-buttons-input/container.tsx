@@ -8,8 +8,8 @@ import { triggeredShortName } from '../../../actions/manageCity'
 
 const mapStateToProps = (state:any) => ({
   cityList: state.cityManageReducer.cityList,
-  cityDuplicate: state.cityManageReducer.duplicate,
-  shortName: state.cityManageReducer.shortName
+  errorMessage: state.cityManageReducer.errorMessage,
+  errorMessageFromApi: state.cityInformationReducer.errorMessageFromApi
 })
 
 const mapDispatchToProps = (dispatch:any) => ({

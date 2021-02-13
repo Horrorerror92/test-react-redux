@@ -47,13 +47,13 @@ const deleteCity = (city: string) => ({
 })
 
 const cityListLimit = () => ({
-  type: CITY_LIMIT,
+  type: CITY_LIMIT
 })
 
 const cityDuplicate = () => ({
-  type: CITY_DUPLICATE,
+  type: CITY_DUPLICATE
 })
 
 const cityShort = () => ({
-  type: CITY_SHORT,
+  type: CITY_SHORT
 })

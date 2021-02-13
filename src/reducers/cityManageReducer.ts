@@ -13,8 +13,7 @@ export const cityManageReducer = (state = InitialCityList, action:any) =>{
       return {
         ...state,
         cityList: state.cityList.concat(action.city),
-        duplicate: false,
-        shortName: false,
+        errorMessage: '',
         toLocal: localStorage.setItem('cityList', JSON.stringify(state.cityList.concat(action.city))) 
       }
     case WEATHER_CITY_DELETE:
@@ -32,12 +31,12 @@ export const cityManageReducer = (state = InitialCityList, action:any) =>{
     case CITY_DUPLICATE:
       return {
         ...state,
-        duplicate: true
+        errorMessage: 'You can\'t remember the city twice.'
       }
     case CITY_SHORT:
       return {
         ...state,
-        shortName: true
+        errorMessage: 'The name is too short.'
       }
       default:
         return state;

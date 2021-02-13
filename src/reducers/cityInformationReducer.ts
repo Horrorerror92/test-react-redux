@@ -12,7 +12,8 @@ export const cityInformationReducer = (state = InitialState, action:any) =>{
       return {
         ...state,
         loading: true,
-        targetId: null
+        targetId: null,
+        errorMessageFromApi: ''
       };
     case WEATHER_DATA_SUCCESS:
       return {
@@ -25,7 +26,8 @@ export const cityInformationReducer = (state = InitialState, action:any) =>{
       return {
         ...state,
         loading: false,
-        error: action.payload.error.message,      
+        error: action.payload.error.message,
+        errorMessageFromApi: 'City doesn\'t exist or the request is unavailable.'      
       };
       case WEATHER_DATA_GET_ID:
         return {

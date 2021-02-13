@@ -4,12 +4,12 @@ export const InitialState = {
   loading: false,
   data: [],
   error: null, 
-  targetId: null
+  targetId: null,
+  errorMessageFromApi: ''
 };
 
 export const InitialCityList = {
   cityList: arrayCityRememberList,
   limit: false,
-  duplicate: false,
-  shortName: false
+  errorMessage: ''
 }
