@@ -16,9 +16,7 @@ const manageInformation: FC<informationStateItem> = (props) => {
       <h4 className={styles.manageHeader}> Information about City: </h4>     
       <div className={styles.manageInformation }>
         {props.error ? (
-          <WeatherComponent
-            data = {props.error}
-          />
+          <span className = {styles.description}>No information</span>
         ):(
           Object.keys(props.data).map((cityId:any) => (
             <WeatherComponent

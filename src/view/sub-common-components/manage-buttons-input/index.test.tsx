@@ -3,8 +3,8 @@ import { shallow } from 'enzyme';
 import ManaggeButtonsInput from './index'
 
 let cityList = ["Minsk, Brest, Vitebsk"]
-let cityDuplicate = false
-let shortName = false
+let errorMessage = ''
+let errorMessageFromApi = ''
 
 const mockGetCityInformation = jest.fn(() => { return null })
 const mockOnAddCityToList = jest.fn(() => { return null })
@@ -13,8 +13,8 @@ let wrapped = shallow(
     cityList = {cityList} 
     OnGetCityInformation = {mockGetCityInformation}
     OnAddCityToList = {mockOnAddCityToList}
-    cityDuplicate = {cityDuplicate}
-    shortName = {shortName}
+    errorMessage = {errorMessage}
+    errorMessageFromApi = {errorMessageFromApi}
   />)
 
 
