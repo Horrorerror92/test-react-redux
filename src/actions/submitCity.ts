@@ -53,7 +53,7 @@ const addTodoFailure = (error: any) => ({
 })
 
 const parseData = (data: any) => {
-  let dataReturn = []
+  const dataReturn = []
   dataReturn.push(`City : ${data.name}`)
   for (let key in data.main) {
     if (data.main.hasOwnProperty(key)) {

@@ -5,7 +5,7 @@ import './styles.module.css'
 import './common-styles/reset.module.css'
 import './common-styles/styles.module.css'
 
-const App: FC = () => {
+const application: FC = () => {
   return (
     <div className="app">
       <Header />
@@ -14,4 +14,4 @@ const App: FC = () => {
   )
 }
 
-export default App
+export default application

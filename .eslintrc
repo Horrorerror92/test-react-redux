@@ -13,7 +13,7 @@
     }
   },
   "rules": {    
-    "arrow-body-style": ["warn", "always"],
+    "arrow-body-style": "off",
     "import/order": "warn",
     "object-curly-spacing": ["warn", "always"],
     "no-underscore-dangle": "warn",

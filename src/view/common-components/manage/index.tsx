@@ -5,7 +5,7 @@ import styles from './styles.module.css'
 import '../../common-styles/reset.module.css'
 import '../../common-styles/styles.module.css'
 
-const Manage: FC = () => {
+const manage: FC = () => {
   return (
     <div className={styles.manage}>
       <ManageButtonsInput />
@@ -14,4 +14,4 @@ const Manage: FC = () => {
   )
 }
 
-export default Manage
+export default manage

@@ -4,7 +4,7 @@ import styles from './styles.module.css'
 import '../../common-styles/reset.module.css'
 import '../../common-styles/styles.module.css'
 
-const Memory: FC = () => {
+const memory: FC = () => {
   return (
     <div className={styles.module}>
       <ManageCity />
@@ -12,4 +12,4 @@ const Memory: FC = () => {
   )
 }
 
-export default Memory
+export default memory

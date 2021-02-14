@@ -5,7 +5,7 @@ import styles from './styles.module.css'
 import '../../common-styles/reset.module.css'
 import '../../common-styles/styles.module.css'
 
-const TwoColumn: FC = () => {
+const twoColumn: FC = () => {
   return (
     <div className={styles.twoColumn}>
       <Manage />
@@ -14,4 +14,4 @@ const TwoColumn: FC = () => {
   )
 }
 
-export default TwoColumn
+export default twoColumn

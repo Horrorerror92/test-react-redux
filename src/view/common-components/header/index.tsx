@@ -3,7 +3,7 @@ import styles from './styles.module.css'
 import '../../common-styles/reset.module.css'
 import '../../common-styles/styles.module.css'
 
-const Header: FC = () => {
+const header: FC = () => {
   return (
     <div className={styles.header}>
       <h1 className={styles.headerName}>Weather viewer</h1>
@@ -12,4 +12,4 @@ const Header: FC = () => {
   )
 }
 
-export default Header
+export default header
