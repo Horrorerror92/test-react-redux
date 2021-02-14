@@ -1,14 +1,14 @@
-import React, { FC } from 'react';
-import '../../common-styles/reset.module.css';
-import '../../common-styles/styles.module.css';
-import styles from './styles.module.css';
-import Button from '../../basic-components/button';
+import React, { FC } from 'react'
+import '../../common-styles/reset.module.css'
+import '../../common-styles/styles.module.css'
+import styles from './styles.module.css'
+import Button from '../../basic-components/button'
 
 interface manageStateItem {
-  cityList: Array<string>;
-  limit: boolean;
-  OnGetCityInformation: (city: string) => void;
-  OnRemoveCityFromList: (city: string) => void;
+  cityList: Array<string>
+  limit: boolean
+  OnGetCityInformation: (city: string) => void
+  OnRemoveCityFromList: (city: string) => void
 }
 
 const manageCity: FC<manageStateItem> = ({ cityList, limit, OnGetCityInformation, OnRemoveCityFromList }) => {
@@ -30,7 +30,7 @@ const manageCity: FC<manageStateItem> = ({ cityList, limit, OnGetCityInformation
         {limit ? <span className={styles.limitMsg}>You can save no more than 5 cities. </span> : null}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default manageCity;
+export default manageCity

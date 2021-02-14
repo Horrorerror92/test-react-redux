@@ -1,5 +1,5 @@
-import React from 'react';
+import React from 'react'
 
 export interface ButtonModel extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  title: string;
+  title: string
 }

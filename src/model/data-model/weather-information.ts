@@ -1,3 +1,3 @@
 export interface WeatherInformation {
-  data: string;
+  data: string
 }

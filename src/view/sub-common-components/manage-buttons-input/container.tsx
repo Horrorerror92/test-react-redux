@@ -1,38 +1,38 @@
-import { connect } from 'react-redux';
-import manageButtonsInput from './index';
-import { getCityInformation } from '../../../actions/submitCity';
-import { addCityToList, blockCityList, triggeredCityDuplicate, triggeredShortName } from '../../../actions/manageCity';
+import { connect } from 'react-redux'
+import manageButtonsInput from './index'
+import { getCityInformation } from '../../../actions/submitCity'
+import { addCityToList, blockCityList, triggeredCityDuplicate, triggeredShortName } from '../../../actions/manageCity'
 
 const mapStateToProps = (state: any) => ({
   cityList: state.cityManageReducer.cityList,
   errorMessage: state.cityManageReducer.errorMessage,
   errorMessageFromApi: state.cityInformationReducer.errorMessageFromApi,
-});
+})
 
 const mapDispatchToProps = (dispatch: any) => ({
   OnGetCityInformation(city: string) {
-    dispatch(getCityInformation(city));
+    dispatch(getCityInformation(city))
   },
   OnAddCityToList(city: string, cityCount: number, cityList: Array<string>) {
-    let duplicateCity = false;
+    let duplicateCity = false
     for (let i = 0; i < cityList.length; i++) {
       if (cityList[i] === city) {
-        duplicateCity = true;
+        duplicateCity = true
       }
     }
     if (city.trim().length > 1 && cityCount < 5 && !duplicateCity) {
-      dispatch(addCityToList(city));
+      dispatch(addCityToList(city))
     }
     if (cityCount > 4) {
-      dispatch(blockCityList());
+      dispatch(blockCityList())
     }
     if (duplicateCity) {
-      dispatch(triggeredCityDuplicate());
+      dispatch(triggeredCityDuplicate())
     }
     if (city.length < 2) {
-      dispatch(triggeredShortName());
+      dispatch(triggeredShortName())
     }
   },
-});
+})
 
-export default connect(mapStateToProps, mapDispatchToProps)(manageButtonsInput);
+export default connect(mapStateToProps, mapDispatchToProps)(manageButtonsInput)

@@ -11,7 +11,8 @@ In the project directory, you can run:
 - - npm run test-coverage :  run all tests with coverage.
 - - npm run build : create static build files.
 - - npm run servopen : Providing static files in Express () [http://localhost:3010]
-
+- - npm run lint : Showing code style warnings and errors
+- - npm run format : Trying to fix warnings and errors using "Prettier".
 - production test:
 
 - - docker command:

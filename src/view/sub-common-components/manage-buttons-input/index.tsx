@@ -1,19 +1,19 @@
-import React, { FC } from 'react';
-import '../../common-styles/reset.module.css';
-import '../../common-styles/styles.module.css';
-import styles from './styles.module.css';
-import Button from '../../basic-components/button';
-import Input from '../../basic-components/input';
+import React, { FC } from 'react'
+import '../../common-styles/reset.module.css'
+import '../../common-styles/styles.module.css'
+import styles from './styles.module.css'
+import Button from '../../basic-components/button'
+import Input from '../../basic-components/input'
 
 interface IgetCityProps {
-  OnGetCityInformation: (city: string) => void;
-  OnAddCityToList: (city: string, cityCount: number, cityList: Array<string>) => void;
-  cityList: Array<string>;
-  errorMessage: string;
-  errorMessageFromApi: string;
+  OnGetCityInformation: (city: string) => void
+  OnAddCityToList: (city: string, cityCount: number, cityList: Array<string>) => void
+  cityList: Array<string>
+  errorMessage: string
+  errorMessageFromApi: string
 }
 
-let city: string = '';
+let city: string = ''
 
 const manageButtonsInput: FC<IgetCityProps> = ({
   OnGetCityInformation,
@@ -23,14 +23,14 @@ const manageButtonsInput: FC<IgetCityProps> = ({
   errorMessageFromApi,
 }) => {
   const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
-    city = event.target.value;
-  };
+    city = event.target.value
+  }
 
   const handlePressed = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
-      OnGetCityInformation(city.trim());
+      OnGetCityInformation(city.trim())
     }
-  };
+  }
   return (
     <div className={styles.manageButtonBlock}>
       <div className={styles.manageButtonsInput}>
@@ -43,7 +43,7 @@ const manageButtonsInput: FC<IgetCityProps> = ({
       {errorMessage.length > 0 ? <span className={styles.errorMsg}>{errorMessage}</span> : null}
       {errorMessageFromApi.length > 0 ? <span className={styles.errorMsg}>{errorMessageFromApi}</span> : null}
     </div>
-  );
-};
+  )
+}
 
-export default manageButtonsInput;
+export default manageButtonsInput

@@ -1,12 +1,12 @@
-import React, { FC } from 'react';
-import '../../common-styles/reset.module.css';
-import '../../common-styles/styles.module.css';
-import styles from './styles.module.css';
-import WeatherComponent from '../../basic-components/weather-item';
+import React, { FC } from 'react'
+import '../../common-styles/reset.module.css'
+import '../../common-styles/styles.module.css'
+import styles from './styles.module.css'
+import WeatherComponent from '../../basic-components/weather-item'
 
 interface informationStateItem {
-  error: string;
-  data: any;
+  error: string
+  data: any
 }
 
 const manageInformation: FC<informationStateItem> = (props) => {
@@ -24,7 +24,7 @@ const manageInformation: FC<informationStateItem> = (props) => {
         ) : null}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default manageInformation;
+export default manageInformation

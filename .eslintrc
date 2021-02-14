@@ -12,20 +12,12 @@
       }
     }
   },
-  "rules": {  
-    "react/react-in-jsx-scope": "warn",
-    "react/button-has-type": "warn",
-    "prefer-arrow-callback": "warn",
-    "@typescript-eslint/indent": "warn",
+  "rules": {    
+    "arrow-body-style": ["warn", "always"],
+    "import/order": "warn",
+    "object-curly-spacing": ["warn", "always"],
     "no-underscore-dangle": "warn",
     "no-prototype-builtins": "warn",
-    "import/order": "warn",
-    "prefer-const": ["warn", {
-        "destructuring": "any",
-        "ignoreReadBeforeAssign": false
-    }],
-    "arrow-body-style": ["warn", "always"],
-    "object-curly-spacing": ["warn", "always"],
     "no-unused-vars": [
       "warn",
       {
@@ -33,6 +25,14 @@
         "args": "none"
       }
     ],
+    "prefer-arrow-callback": "warn",
+    "prefer-const": ["warn", {
+      "destructuring": "any",
+      "ignoreReadBeforeAssign": false
+    }],
+    "react/react-in-jsx-scope": "warn",
+    "react/button-has-type": "warn",
+    "@typescript-eslint/indent": "warn",
     "@typescript-eslint/naming-convention": [
       "warn",
       {
@@ -53,6 +53,7 @@
         "ignoreRestArgs": true
       }
     ],
+    "@typescript-eslint/semi" : "off",
     "max-len": [
       "warn",
       {
