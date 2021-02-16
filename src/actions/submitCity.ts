@@ -1,29 +1,20 @@
 import axios from 'axios'
 import { STARTED_WEATHER_DATA, WEATHER_DATA_SUCCESS, WEATHER_DATA_FAILURE, WEATHER_DATA_GET_ID } from './types'
-import { API_KEY } from '../.resources/resourses'
-
-let corsPrefix: string
-
-if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-  corsPrefix = ''
-} else {
-  corsPrefix = 'https://cors-anywhere.herokuapp.com/'
-}
+import GetInformationApiService from '../api-services/get-information-api-service/index'
 
 export const getCityInformation = (city: string) => {
-  return (dispatch: any) => {
+  return async (dispatch: any) => {
     dispatch(addCityStarted())
-    axios
-      .get(`${corsPrefix}http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`)
-      .then(function (response) {
-        const dataFromParse = parseData(response.data)
-        const targetId = parseId(response.data)
-        dispatch(addCitySuccess(dataFromParse))
-        dispatch(addCityId(targetId))
-      })
-      .catch(function (error) {
-        dispatch(addTodoFailure(error))
-      })
+    const result: any = await GetInformationApiService(city)
+    if (result.value !== null) {
+      const dataFromParse = parseData(result.value)
+      const targetId = parseId(result.value)
+      dispatch(addCitySuccess(dataFromParse))
+      dispatch(addCityId(targetId))
+    }
+    if (result.error !== null) {
+      dispatch(addTodoFailure(result.error.response.statusText))
+    }
   }
 }
 
