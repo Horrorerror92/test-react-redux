@@ -3,13 +3,9 @@ import '../../common-styles/reset.module.css'
 import '../../common-styles/styles.module.css'
 import styles from './styles.module.css'
 import WeatherComponent from '../../basic-components/weather-item'
+import { InformationItem } from '../../../model/data-model/information-item'
 
-interface informationStateItem {
-  error: string
-  data: any
-}
-
-const manageInformation: FC<informationStateItem> = (props) => {
+const manageInformation: FC<InformationItem> = (props) => {
   return (
     <div>
       <h4 className={styles.manageHeader}> Information about City: </h4>

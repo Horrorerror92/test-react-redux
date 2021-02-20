@@ -1,3 +1,3 @@
-export interface CityItem {
+export interface ICityItem {
   city: string
 }

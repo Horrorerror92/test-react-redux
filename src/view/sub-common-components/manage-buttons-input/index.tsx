@@ -4,18 +4,11 @@ import '../../common-styles/styles.module.css'
 import styles from './styles.module.css'
 import Button from '../../basic-components/button'
 import Input from '../../basic-components/input'
-
-interface IgetCityProps {
-  OnGetCityInformation: (city: string) => void
-  OnAddCityToList: (city: string, cityCount: number, cityList: Array<string>) => void
-  cityList: Array<string>
-  errorMessage: string
-  errorMessageFromApi: string
-}
+import { IGetCity } from '../../../model/data-model/get-city'
 
 let city: string = ''
 
-const manageButtonsInput: FC<IgetCityProps> = ({
+const ManageButtonsInput: FC<IGetCity> = ({
   OnGetCityInformation,
   OnAddCityToList,
   cityList,
@@ -46,4 +39,4 @@ const manageButtonsInput: FC<IgetCityProps> = ({
   )
 }
 
-export default manageButtonsInput
+export default ManageButtonsInput

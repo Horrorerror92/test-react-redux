@@ -1,3 +1,3 @@
-export interface WeatherInformation {
+export interface IWeatherInformation {
   data: string
 }

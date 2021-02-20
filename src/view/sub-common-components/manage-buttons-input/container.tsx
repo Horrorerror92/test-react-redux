@@ -1,7 +1,9 @@
+import React, { FC } from 'react'
 import { connect } from 'react-redux'
-import manageButtonsInput from './index'
+import ManageButtonsInput from './index'
 import { getCityInformation } from '../../../actions/submitCity'
 import { addCityToList, blockCityList, triggeredCityDuplicate, triggeredShortName } from '../../../actions/manageCity'
+import { IGetCity } from '../../../model/data-model/get-city'
 
 const mapStateToProps = (state: any) => ({
   cityList: state.cityManageReducer.cityList,
@@ -35,4 +37,16 @@ const mapDispatchToProps = (dispatch: any) => ({
   },
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(manageButtonsInput)
+const ManageButtonsInputContainer: FC<IGetCity> = (props) => {
+  return (
+    <ManageButtonsInput
+      OnGetCityInformation={props.OnGetCityInformation}
+      OnAddCityToList={props.OnAddCityToList}
+      cityList={props.cityList}
+      errorMessage={props.errorMessage}
+      errorMessageFromApi={props.errorMessageFromApi}
+    />
+  )
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ManageButtonsInputContainer)

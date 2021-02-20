@@ -3,15 +3,9 @@ import '../../common-styles/reset.module.css'
 import '../../common-styles/styles.module.css'
 import styles from './styles.module.css'
 import Button from '../../basic-components/button'
+import { IManageItem } from '../../../model/data-model/manage-item'
 
-interface manageStateItem {
-  cityList: Array<string>
-  limit: boolean
-  OnGetCityInformation: (city: string) => void
-  OnRemoveCityFromList: (city: string) => void
-}
-
-const manageCity: FC<manageStateItem> = ({ cityList, limit, OnGetCityInformation, OnRemoveCityFromList }) => {
+const ManageCity: FC<IManageItem> = ({ cityList, limit, OnGetCityInformation, OnRemoveCityFromList }) => {
   return (
     <div className={styles.manageCity}>
       <h4 className={styles.manageHeader}>Cities list:</h4>
@@ -33,4 +27,4 @@ const manageCity: FC<manageStateItem> = ({ cityList, limit, OnGetCityInformation
   )
 }
 
-export default manageCity
+export default ManageCity
