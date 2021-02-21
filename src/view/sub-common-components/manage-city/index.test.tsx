@@ -4,7 +4,6 @@ import ManaggeCity from './index'
 
 let cityList = ['Minsk, Brest, Vitebsk']
 let limit = false
-let shortName = false
 
 const mockGetCityInformation = jest.fn(() => {
   return null
@@ -12,7 +11,7 @@ const mockGetCityInformation = jest.fn(() => {
 const mockOnRemoveCityFromList = jest.fn(() => {
   return null
 })
-let wrapped = shallow(
+const wrapped = shallow(
   <ManaggeCity
     cityList={cityList}
     limit={limit}

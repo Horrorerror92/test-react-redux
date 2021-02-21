@@ -13,7 +13,7 @@ const manageInformation: FC<InformationItem> = (props) => {
         {props.error ? (
           <span className={styles.description}>No information</span>
         ) : (
-          Object.keys(props.data).map((cityId: any) => <WeatherComponent data={props.data[cityId]} key={cityId} />)
+          Object.keys(props.data).map((cityId: string) => <WeatherComponent data={props.data[cityId]} key={cityId} />)
         )}
         {props.data.length === 0 && props.error === null ? (
           <span className={styles.description}>No information</span>

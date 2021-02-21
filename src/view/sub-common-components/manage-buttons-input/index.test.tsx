@@ -12,7 +12,7 @@ const mockGetCityInformation = jest.fn(() => {
 const mockOnAddCityToList = jest.fn(() => {
   return null
 })
-let wrapped = shallow(
+const wrapped = shallow(
   <ManaggeButtonsInput
     cityList={cityList}
     OnGetCityInformation={mockGetCityInformation}

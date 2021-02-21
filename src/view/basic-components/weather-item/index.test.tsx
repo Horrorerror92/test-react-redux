@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 import WeatherComponent from './index'
 
 const data = 'test data'
-let wrapped = shallow(<WeatherComponent data={data} />)
+const wrapped = shallow(<WeatherComponent data={data} />)
 
 describe('WeatherComponent', () => {
   it('should render the WeatherComponent Component correctly', () => {

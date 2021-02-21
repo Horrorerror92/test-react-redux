@@ -1,4 +1,4 @@
-let arrayCityRememberList = JSON.parse(localStorage.getItem('cityList') || '[]')
+const arrayCityRememberList = JSON.parse(localStorage.getItem('cityList') || '[]')
 
 export const InitialState = {
   loading: false,

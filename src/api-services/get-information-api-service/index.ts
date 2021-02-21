@@ -1,8 +1,9 @@
 import axios from 'axios'
 import { API_KEY } from '../../.resources/resourses'
+import { IDataFromApi } from '../../model/data-model/data-from-api'
 
 const GetInformationApiService = async (city: string) => {
-  const result: any = {
+  const result: IDataFromApi = {
     value: null,
     error: null,
   }
@@ -10,9 +11,9 @@ const GetInformationApiService = async (city: string) => {
     const response = await axios({
       method: 'GET',
       url: 'https://community-open-weather-map.p.rapidapi.com/weather',
-      params: { q: `${ city }`, units: 'metric', mode: 'JSON' },
+      params: { q: `${city}`, units: 'metric', mode: 'JSON' },
       headers: {
-        'x-rapidapi-key': `${ API_KEY }`,
+        'x-rapidapi-key': `${API_KEY}`,
         'x-rapidapi-host': 'community-open-weather-map.p.rapidapi.com',
       },
     })

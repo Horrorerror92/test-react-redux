@@ -18,7 +18,7 @@
     "spaced-comment": "warn",
     "class-methods-use-this": "warn",
     "object-curly-spacing": ["warn", "always"],
-    "no-underscore-dangle": "warn",
+    "no-underscore-dangle": "off",
     "no-prototype-builtins": "warn",
     "no-unused-vars": [
       "warn",
@@ -28,15 +28,15 @@
       }
     ],
     "prefer-arrow-callback": "warn",
-    "prefer-const": ["warn", {
+    "prefer-const": ["off", {
       "destructuring": "any",
       "ignoreReadBeforeAssign": false
     }],
     "react/react-in-jsx-scope": "warn",
-    "react/button-has-type": "warn",
+    "react/button-has-type": "off",
     "@typescript-eslint/indent": "warn",
     "@typescript-eslint/naming-convention": [
-      "warn",
+      "off",
       {
         "selector": "variable",
         "format": ["camelCase"]
@@ -50,7 +50,7 @@
       }
     ],
     "@typescript-eslint/no-explicit-any": [
-      "warn",
+      "off",
       {
         "ignoreRestArgs": true
       }
@@ -73,7 +73,7 @@
     ],
     "react/jsx-key": "warn",
     "import/no-extraneous-dependencies": [
-      "warn",
+      "off",
       {
         "devDependencies": [
           "**/*.test.js",

@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import Memory from './index'
 
-let wrapped = shallow(<Memory />)
+const wrapped = shallow(<Memory />)
 
 describe('Memory', () => {
   it('should render the Memory Component correctly', () => {

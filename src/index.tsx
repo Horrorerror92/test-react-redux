@@ -12,9 +12,9 @@ const rootElement: HTMLElement | null = document.getElementById('root')
 const devTools =
   window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
     ? compose(
-        applyMiddleware(thunk),
-        (window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__()
-      )
+      applyMiddleware(thunk),
+      (window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__()
+    )
     : applyMiddleware(thunk)
 
 const store = createStore(rootReducer, devTools)
