@@ -29,4 +29,3 @@ export type DispatchICityLimit = (arg: ICityLimit) => ICityLimit
 export type DispatchICityDuplicate = (arg: ICityDuplicate) => ICityDuplicate
 export type DispatchICityShort = (arg: ICityShort) => ICityShort
 
-export type ManageCityAction = ICityRemember | ICityDelete | ICityLimit | ICityDuplicate | ICityShort
